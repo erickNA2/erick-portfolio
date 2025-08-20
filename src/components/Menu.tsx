@@ -26,10 +26,10 @@ export default function Menu() {
   const formattedTime = currentDateTime.toLocaleString('pt-BR', options);
 
   return (
-    <div className="relative md:px-10 mt-2 w-full min-h-18 grid grid-cols-2 md:grid-cols-4 gap-2 z-10">
+    <div className="relative md:absolute top-0 left-0 md:px-10 mt-2 w-full min-h-18 grid grid-cols-2 md:grid-cols-4 gap-6 z-10">
         <Box1>
             <Text variant='caption' className='flex justify-center'>Front-End Developer</Text>
-            <Text variant='body' className='flex justify-center'>Erick Nunes de Araujo</Text>
+            <Text variant='body' className='flex justify-center'>Available for work!</Text>
         </Box1>
         <Box1>
             <Text variant='caption' className='flex justify-center'>GitHub</Text>

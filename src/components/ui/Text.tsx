@@ -12,9 +12,9 @@ interface TextProps {
 }
 
 const variantClasses: Record<TextVariant, string> = {
-  title: 'text-3xl font-bold',
-  subtitle: 'text-2xl font-semibold',
-  body: 'text-base text-white',
+  title: 'text-[108px] md:text-[242px] uppercase text-balance font-[Copperplate] tracking-wide text-white',
+  subtitle: 'text-4xl text-black font-[Avenir] text-white',
+  body: 'text-base text-black font-[Helvetica]',
   caption: 'text-sm text-gray-500',
 };
 
