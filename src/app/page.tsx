@@ -3,7 +3,6 @@
 // app/page.tsx
 import Menu from "@/components/Menu";
 import Hero from "./pages/Hero";
-import Method from "./pages/Method";
 import gsap from "gsap";
 import { useState } from "react";
 import { useGSAP } from "@gsap/react"
@@ -12,7 +11,7 @@ export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useGSAP(() => {
-    const mouseMove = (e: any) => {
+    const mouseMove = (e: MouseEvent) => {
       setMousePosition({
         x: e.clientX,
         y: e.clientY

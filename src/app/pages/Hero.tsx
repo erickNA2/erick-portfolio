@@ -14,14 +14,13 @@ export default function Hero() {
               <Text variant='caption'>Developer</Text>
             </div>
         </div>
-        <div className='md:col-span-2 flex flex-col justify-center items-center align-middle '>
+        <div className='md:col-span-2 flex flex-col justify-center items-center align-middle'>
           <div className='text-center w-3/5 mb-16'>
-            <Text variant='subtitle'>You know your business will be more successful with the right digital aproach, so why don't we talk it over?</Text>
+            <Text variant='subtitle'>{`You know your business will be more successful with the right digital approach, so why don't we talk it over?`}</Text>
           </div>
             
             <Button><Text variant='subtitle'>Scheadule Call</Text></Button>
         </div>
-       
     </div>
   )
 }
