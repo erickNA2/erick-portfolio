@@ -12,7 +12,7 @@ interface TextProps {
 }
 
 const variantClasses: Record<TextVariant, string> = {
-  title: 'text-[5.5rem] uppercase text-balance font-[Copperplate] tracking-wide text-white',
+  title: 'text-[5.5rem] uppercase text-balance font-extralight font-[Copperplate,Cilzel,Balthazar,Georgia] tracking-wide text-white',
   subtitle: 'text-[1.25rem] text-black font-[Avenir] text-white',
   body: 'text-base text-white font-[Helvetica]',
   caption: 'text-sm text-gray-300',
