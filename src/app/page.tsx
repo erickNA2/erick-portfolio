@@ -18,26 +18,22 @@ export default function Home() {
         y: e.clientY
       })
     }
-    window.addEventListener("mousemove", mouseMove)
+    document.addEventListener("mousemove", mouseMove)
 
     gsap.to(".cursor", {
-      x: mousePosition.x - 14,
-      y: mousePosition.y - 14
+      x: mousePosition.x - 58,
+      y: mousePosition.y - 18 
     })
   }, [mousePosition])
 
   return (
     <>
-      <div className="cursor h-10 w-10 rounded-full backdrop-invert-100 fixed z-50 pointer-events-none invisible md:visible absolute"></div>
-      <Menu />
-
+    <Menu />
       <main className="relative flex flex-col min-h-screen max-w-screen md:px-10 overflow-clip bg-[rgb(11,11,11)]">
+        <div className="cursor h-10 w-10 rounded-full backdrop-invert-100 z-50 pointer-events-none invisible md:visible absolute"></div>
         
-        <Hero/>
-        <Method/>
-
+        <Hero />
       </main>
     </>
-
   );
 }

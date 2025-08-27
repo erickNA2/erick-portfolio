@@ -24,9 +24,9 @@
   }
 }
 
-* {
-  cursor: none;
-}
+  * {
+    cursor: none;
+  }
 
 body {
   background: var(--background);
