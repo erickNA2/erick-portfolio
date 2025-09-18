@@ -1,21 +1,31 @@
-// components/Text.tsx
 import { ReactNode, ElementType } from 'react';
 import clsx from 'clsx';
+import {Major_Mono_Display, Inter} from 'next/font/google'
+
+const mnDisplayFont = Major_Mono_Display({
+  subsets: ["latin"],
+  weight: "400"
+})
+
+const interFont = Inter({
+  subsets: ["latin"],
+  weight: "300"
+})
 
 type TextVariant = 'title' | 'subtitle' | 'body' | 'caption';
 
 interface TextProps {
   variant?: TextVariant;
   children: ReactNode;
-  className?: string;
+  className?: string | null;
   as?: ElementType;
 }
 
 const variantClasses: Record<TextVariant, string> = {
-  title: 'text-[5.5rem] uppercase text-balance font-extralight font-[Copperplate,Cilzel,Balthazar,Georgia] tracking-wide text-white',
-  subtitle: 'text-[1.25rem] text-black font-[Avenir] text-white',
-  body: 'text-base text-white font-[Helvetica]',
-  caption: 'text-sm text-gray-300',
+  title: 'text-[5.8rem] md:text-[7rem] captalize text-balance font-[Major_Mono_Display] tracking-wide',
+  subtitle: 'text-[1.2rem] md:text-[1.4rem] font-[Major_Mono_Display]',
+  body: 'text-[1rem] md:text-[1.1rem] font-[Inter]',
+  caption: 'text-[.7rem] md:text-[.8rem] font-[Inter]',
 };
 
 export default function Text({

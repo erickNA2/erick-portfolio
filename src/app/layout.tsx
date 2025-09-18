@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {Major_Mono_Display, Inter} from 'next/font/google'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const mnDisplayFont = Major_Mono_Display({
   subsets: ["latin"],
-});
+  weight: "400"
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const interFont = Inter({
   subsets: ["latin"],
-});
+  weight: "300"
+})
 
 export const metadata: Metadata = {
   title: "Erick Nunes",
@@ -24,8 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.png" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`antialiased overflow-x-hidden w-screen`}
       >
         {children}
       </body>
