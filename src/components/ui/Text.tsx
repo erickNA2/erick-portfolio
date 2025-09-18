@@ -16,9 +16,9 @@ type TextVariant = 'title' | 'subtitle' | 'body' | 'caption';
 
 interface TextProps {
   variant?: TextVariant;
-  children: ReactNode;
+  children: any;
   className?: string | null;
-  as?: ElementType;
+  as?: any;
 }
 
 const variantClasses: Record<TextVariant, string> = {
