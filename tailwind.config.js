@@ -8,6 +8,20 @@ module.exports = {
         georgia: ['Georgia'],
         times: ['"Times New Roman"'],
       },
+      keyframes: {
+        flip: {
+          '0%': { transfoorm: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(180deg)' },          
+        },
+      },
+      animation: {
+        flip: 'flip 0.6s infinite', // Adjust duration and timing as needed
+      },
+    },
+  },
+  variants: {
+    extend: {
+      animation: ['hover', 'focus'],
     },
   },
   plugins: [],
