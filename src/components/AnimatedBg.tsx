@@ -69,24 +69,24 @@ function Ground(props : any) {
 export default function AnimatedBg() {
   return (
     <div className='absolute top-0 left-0 z-0 w-screen h-screen m-0 p-0'>
-      <Canvas dpr={[1, 1.5]} camera={{ position: [-0.8, 0, 1] }} className='relative w-full h-full'>
+      <Canvas dpr={[1, 1.5]} camera={{ position: [-0.6, 0, 1] }} className='relative w-full h-full'>
         <color attach="background" args={(['rgb(11, 11, 11)'])} />
         <ambientLight />
-        <FirstPersonControls autoForward={true} movementSpeed={0.01}/>
+        <FirstPersonControls />
         <Suspense fallback={null}>
 
           <Triangle color="#91eaff" scale={0.008} rotation={[0, 0, Math.PI / 3]} />
           <Triangle color="#ffc5c4" scale={0.009} position={[2, 2, -2]} rotation={[0, 0, Math.PI / 3]} />
-          {/* <Triangle color="#ffffd4" scale={0.009} position={[-2, 1, -2]} rotation={[0, 0, Math.PI / 3]} />
-          <Triangle color="#f2fedc" scale={0.009} position={[0, 3, -10]} rotation={[0, 0, Math.PI / 3]} />  */}
+          
+          {/* <Triangle color="#f2fedc" scale={0.009} position={[0, 3, -10]} rotation={[0, 0, Math.PI / 3]} />  */}
           <Ground />
 
           <EffectComposer multisampling={8}>
-            <Bloom kernelSize={3} luminanceThreshold={0} luminanceSmoothing={0.4} intensity={0.6} />
+            <Bloom kernelSize={6} luminanceThreshold={0} luminanceSmoothing={1} intensity={1} />
             <Bloom kernelSize={KernelSize.HUGE} luminanceThreshold={0} luminanceSmoothing={0} intensity={0.5} />
           </EffectComposer>
         </Suspense>
-        <CameraShake yawFrequency={0.02} pitchFrequency={0.02} rollFrequency={0.02} />
+        <CameraShake yawFrequency={0.01} pitchFrequency={0.01} rollFrequency={0.01} />
       </Canvas>
     </div>
 
