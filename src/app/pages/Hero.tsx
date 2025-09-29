@@ -24,10 +24,7 @@ export default function Hero() {
           <Button>
             <Text variant='subtitle'>Agendar</Text>
           </Button> 
-          
-          
         </div>
-       
     </div>
   )
 }

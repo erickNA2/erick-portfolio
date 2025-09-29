@@ -68,11 +68,10 @@ function Ground(props : any) {
 
 export default function AnimatedBg() {
   return (
-    <div className='absolute top-0 left-0 z-0 w-screen h-screen m-0 p-0'>
+    <div className='fixed top-0 left-0 z-0 w-screen h-screen m-0 p-0'>
       <Canvas dpr={[1, 1.5]} camera={{ position: [-0.8, 0, 1] }} className='relative w-full h-full'>
         <color attach="background" args={(['rgb(11, 11, 11)'])} />
         <ambientLight />
-        <FirstPersonControls autoForward={true} movementSpeed={0.01}/>
         <Suspense fallback={null}>
 
           <Triangle color="#91eaff" scale={0.008} rotation={[0, 0, Math.PI / 3]} />

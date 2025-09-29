@@ -18,7 +18,7 @@ interface TextProps {
   variant?: TextVariant;
   children: ReactNode;
   className?: string | null;
-  as?: ElementType;
+  as?: any;
 }
 
 const variantClasses: Record<TextVariant, string> = {
