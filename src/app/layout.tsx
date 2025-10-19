@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Menu from "@/components/menu";
+import Menu from "@/components/Menu";
 import Script from "next/script";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
 	title: "Erick Nunes | Desenvolvedor e Designer Web",

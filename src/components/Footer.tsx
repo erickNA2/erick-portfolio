@@ -1,4 +1,4 @@
-import Typography from "./ui/typography";
+import Typography from "./ui/Typography";
 import { FaLinkedin, FaMailBulk, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 

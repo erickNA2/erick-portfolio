@@ -1,7 +1,7 @@
 import React from "react";
-import Typography from "@/components/ui/typography";
-import { Button } from "@/components/ui/button";
-import AnimatedBg from "@/components/animatedBg";
+import Typography from "@/components/ui/Typography";
+import { Button } from "@/components/ui/Button";
+import AnimatedBg from "@/components/AnimatedBg";
 import {
 	Card,
 	CardContent,
