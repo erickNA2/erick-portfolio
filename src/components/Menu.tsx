@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Typography from "./ui/Typography";
+import Typography from "./ui/typography";
 
 export default function Menu() {
 	const [toggleMenu, setToggleMenu] = useState(false);

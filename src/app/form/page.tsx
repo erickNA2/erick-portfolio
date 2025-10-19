@@ -3,8 +3,8 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import Typography from "@/components/ui/Typography";
-import { Button } from "@/components/ui/Button";
+import Typography from "@/components/ui/typography";
+import { Button } from "@/components/ui/button";
 import {
 	Form,
 	FormControl,

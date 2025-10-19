@@ -1,4 +1,3 @@
-import { ReactNode, ElementType } from "react";
 import clsx from "clsx";
 import { Major_Mono_Display, Inter } from "next/font/google";
 
