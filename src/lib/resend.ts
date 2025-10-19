@@ -31,7 +31,7 @@ export const sendEmail = async (data: data) => {
 
     await resend.emails.send({
       to: "erick.araujo@sptech.school",
-      from: "erick <onboarding@resend.dev>",
+      from: "erick <hello@erick-nunes-dev.com.br>",
       subject: `Requisição de Projeto - ${data.nome_cliente}`,
       html: htmlContent,
     });

@@ -18,16 +18,18 @@ export const metadata: Metadata = {
 		"Portfólio",
 		"Criação de sites",
 	],
-	authors: [{ name: "Erick Nunes", url: "https://erick-nunes.vercel.app" }],
+	authors: [
+		{ name: "Erick Nunes", url: "https://www.erick-nunes-dev.com.br" },
+	],
 	openGraph: {
 		title: "Erick Nunes | Desenvolvedor e Designer Web",
 		description:
 			"Conheça o portfólio profissional de Erick Nunes — desenvolvedor e designer web especializado em experiências digitais modernas e eficientes.",
-		url: "https://erick-nunes.vercel.app",
+		url: "https://www.erick-nunes-dev.com.br",
 		siteName: "Portfólio de Erick Nunes",
 		images: [
 			{
-				url: "https://erick-nunes.vercel.app/logo.png",
+				url: "https://www.erick-nunes-dev.com.br/logo.png",
 				width: 1200,
 				height: 630,
 				alt: "Prévia do portfólio de Erick Nunes",
@@ -36,9 +38,9 @@ export const metadata: Metadata = {
 		locale: "pt_BR",
 		type: "website",
 	},
-	metadataBase: new URL("https://erick-nunes.vercel.app"),
+	metadataBase: new URL("https://www.erick-nunes-dev.com.br"),
 	alternates: {
-		canonical: "https://erick-nunes.vercel.app",
+		canonical: "https://erick-nunes-dev.com.br",
 	},
 	category: "Portfólio",
 };
@@ -52,8 +54,8 @@ export default function RootLayout({
 		"@context": "https://schema.org",
 		"@type": "Person",
 		name: "Erick Nunes de Araujo",
-		url: "https://erick-nunes.vercel.app",
-		image: "https://erick-nunes.vercel.app/logo.png",
+		url: "https://www.erick-nunes-dev.com.br",
+		image: "https://www.erick-nunes-dev.com.br/logo.png",
 		jobTitle: "Desenvolvedor e Designer Web",
 		worksFor: {
 			"@type": "Organization",
@@ -76,7 +78,7 @@ export default function RootLayout({
 		"@context": "https://schema.org",
 		"@type": "WebSite",
 		name: "Portfólio de Erick Nunes",
-		url: "https://erick-nunes.vercel.app",
+		url: "https://www.erick-nunes-dev.com.br",
 		description:
 			"Portfólio profissional de Erick Nunes — desenvolvedor e designer web especializado em criação de sites modernos e responsivos.",
 		publisher: {
@@ -85,7 +87,7 @@ export default function RootLayout({
 		},
 		potentialAction: {
 			"@type": "SearchAction",
-			target: "https://erick-nunes.vercel.app/?q={search_term_string}",
+			target: "https://www.erick-nunes-dev.com.br/?q={search_term_string}",
 			"query-input": "required name=search_term_string",
 		},
 		inLanguage: "pt-BR",
