@@ -3,6 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import Link from "next/link";
 import Typography from "@/components/ui/Typography";
 import { Button } from "@/components/ui/Button";
 import {
@@ -26,6 +27,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { sendEmail } from "@/lib/resend";
 import { redirect, RedirectType } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
+import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
 	segmento: z.string().min(1),
@@ -34,6 +37,7 @@ const formSchema = z.object({
 	nome_cliente: z.string().min(1),
 	nome_empresa: z.string().min(1),
 	email_cliente: z.string(),
+	descricao: z.string().optional(),
 	termos: z.boolean(),
 });
 
@@ -41,6 +45,8 @@ export default function MyForm() {
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 	});
+
+	const [sending, setSending] = useState(false);
 
 	const callToast = (message: string, type: number) => {
 		switch (type) {
@@ -92,10 +98,12 @@ export default function MyForm() {
 				nome_cliente: values.nome_cliente,
 				nome_empresa: values.nome_empresa,
 				email_cliente: values.email_cliente,
+				descricao: values.descricao,
 				termos: values.termos,
 			};
 			const parsedData = formSchema.parse(validData);
 			sendEmail(parsedData);
+			setSending(!sending);
 			callToast("Email enviado!", 1);
 			setTimeout(() => {
 				redirect("/", RedirectType.replace);
@@ -107,7 +115,7 @@ export default function MyForm() {
 	}
 
 	return (
-		<section className="relative w-full h-auto flex flex-col items-center justify-center bg-[#111111] mt-20 px-10">
+		<section className="relative w-full h-auto flex flex-col items-center justify-center bg-[#111111] mt-20 px-10 md:px-20">
 			<Typography
 				variant="caption"
 				className={"uppercase opacity-50 text-center text-neutral-100"}
@@ -118,9 +126,25 @@ export default function MyForm() {
 				variant="bodytitle"
 				className={"text-center text-neutral-50"}
 			>
-				preencha o formulario e me ajude a compreender melhor seu
-				projeto
+				agende uma ligação via google meet para discutir ideias
 			</Typography>
+			<Link
+				href={"https://calendly.com/araujoerick-n1/30min"}
+				target="_blank"
+			>
+				<Button className="relative mt-4 w-[280px] h-[58px] flex items-center justify-center hover:bg-white hover:text-black border-[1px] border-white hover:border-black duration-400 ease-in-out transition hover:cursor-pointer">
+					<Typography variant="subtitle">Agendar ligação</Typography>
+				</Button>
+			</Link>
+			<div className="relative w-1/2 mt-8 h-[1px] bg-neutral-100 opacity-80"></div>
+
+			<Typography
+				variant="bodytitle"
+				className={"text-center text-neutral-50 mt-8"}
+			>
+				ou me envie um email com as informações de seu projeto
+			</Typography>
+			<div className="relative w-1/2 mt-8 h-[1px] bg-neutral-100 opacity-80"></div>
 
 			<Form {...form}>
 				<form
@@ -132,7 +156,7 @@ export default function MyForm() {
 						name="segmento"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Em qual segmento atua?</FormLabel>
+								<FormLabel>Em qual segmento atua?*</FormLabel>
 								<FormControl>
 									<Input
 										placeholder="Segmento"
@@ -141,7 +165,7 @@ export default function MyForm() {
 									/>
 								</FormControl>
 								<FormDescription>
-									Este segmento de atuação da sua empresa
+									Segmento de atuação da sua empresa
 								</FormDescription>
 								<FormMessage />
 							</FormItem>
@@ -156,7 +180,7 @@ export default function MyForm() {
 								render={({ field }) => (
 									<FormItem>
 										<FormLabel>
-											Qual tipo de WebSite precisa?
+											Qual tipo de WebSite precisa?*
 										</FormLabel>
 										<Select
 											onValueChange={field.onChange}
@@ -169,17 +193,22 @@ export default function MyForm() {
 											</FormControl>
 											<SelectContent>
 												<SelectItem value="onepager">
-													OnePager
+													Pagina Unica (OnePager)
+												</SelectItem>
+												<SelectItem value="portfolio_profissional">
+													Portfólio Profissional
+												</SelectItem>
+												<SelectItem value="serviço_web">
+													Serviço Web
 												</SelectItem>
 												<SelectItem value="ecommerce">
-													Ecommerce
+													Loja Virtual
 												</SelectItem>
 												<SelectItem value="outro">
-													outro
+													Outro
 												</SelectItem>
 											</SelectContent>
 										</Select>
-
 										<FormMessage />
 									</FormItem>
 								)}
@@ -272,6 +301,27 @@ export default function MyForm() {
 					/>
 					<FormField
 						control={form.control}
+						name="descricao"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>Descrição</FormLabel>
+								<FormControl>
+									<Textarea
+										id="descricao"
+										placeholder="Descrição"
+										{...field}
+									/>
+								</FormControl>
+								<FormDescription>
+									Adicione descrições ou comentarios
+									adicionais sobre seu projeto
+								</FormDescription>
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
 						name="termos"
 						render={({ field }) => (
 							<FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4">
@@ -282,9 +332,18 @@ export default function MyForm() {
 								</FormControl>
 								<div className="space-y-1 leading-none">
 									<FormLabel>
-										Eu concordo com o processamento dos meus
-										dados pessoais de acordo com a Política
-										de Privacidade.
+										<p>
+											Eu concordo com o processamento dos
+											meus dados pessoais de acordo com a{" "}
+											<Link
+												href={"/legal"}
+												className={
+													"font-bold hover:text-blue-500 underline"
+												}
+											>
+												Política de Privacidade
+											</Link>
+										</p>
 									</FormLabel>
 
 									<FormMessage />
@@ -295,7 +354,8 @@ export default function MyForm() {
 					<div className="relative w-full flex justify-center">
 						<Button
 							type="submit"
-							className="relative w-[200px] h-[52px] flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition"
+							disabled={sending}
+							className="relative w-[200px] h-[52px] flex items-center justify-center hover:bg-white hover:text-black hover:border-1 hover:border-black duration-400 ease-in-out transition hover:cursor-pointer"
 						>
 							<Typography variant="subtitle">enviar</Typography>
 						</Button>

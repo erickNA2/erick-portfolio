@@ -7,7 +7,6 @@ import {
 	CameraShake,
 	useTexture,
 	MeshReflectorMaterial,
-	FirstPersonControls,
 } from "@react-three/drei";
 import { KernelSize } from "postprocessing";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
