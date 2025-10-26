@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<div className="relative w-full h-40 flex flex-col items-center justify-between py-2 bg-[#111111] z-2">
+		<div className="relative w-full h-36 flex flex-col items-center justify-between py-2 bg-[#111111] z-2">
 			<div className="relative w-full h-2/3 flex items-center justify-center space-x-10">
 				<Link
 					href={"https://www.linkedin.com/in/erick-nunes-a243742b1"}

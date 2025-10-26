@@ -7,16 +7,22 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
 	title: "Erick Nunes | Desenvolvedor e Designer Web",
 	description:
-		"Portfólio profissional de Erick Nunes, desenvolvedor e designer web especializado em criar sites modernos, responsivos e de alto desempenho.",
+		"Torne seu projeto realidade com as melhores soluções mais modernas e atuais do mercado. Encomende seu web site responsivo e profissional hoje.",
 	keywords: [
+		"Erick",
 		"Erick Nunes",
+		"Erick Nunes de Araujo",
 		"Desenvolvedor Web",
 		"Designer Web",
 		"Frontend",
 		"Next.js",
 		"React",
-		"Portfólio",
 		"Criação de sites",
+		"Manutenção de Site",
+		"Site",
+		"Web Site",
+		"Ecommerce",
+		"Site Profissional",
 	],
 	authors: [
 		{ name: "Erick Nunes", url: "https://www.erick-nunes-dev.com.br" },
@@ -29,10 +35,10 @@ export const metadata: Metadata = {
 		siteName: "Portfólio de Erick Nunes",
 		images: [
 			{
-				url: "https://www.erick-nunes-dev.com.br/logo.png",
+				url: "https://www.erick-nunes-dev.com.br/logo.svg",
 				width: 1200,
 				height: 630,
-				alt: "Prévia do portfólio de Erick Nunes",
+				alt: "Prévia de Erick Nunes Dev",
 			},
 		],
 		locale: "pt_BR",
@@ -42,7 +48,7 @@ export const metadata: Metadata = {
 	alternates: {
 		canonical: "https://erick-nunes-dev.com.br",
 	},
-	category: "Portfólio",
+	category: "Criação de Sites e Aplicativos",
 };
 
 export default function RootLayout({
@@ -51,14 +57,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const structuredDataPerson = {
-		"@context": "https://schema.org",
 		"@type": "Person",
 		name: "Erick Nunes de Araujo",
 		url: "https://www.erick-nunes-dev.com.br",
 		image: "https://www.erick-nunes-dev.com.br/logo.png",
 		jobTitle: "Desenvolvedor e Designer Web",
 		worksFor: {
-			"@type": "Organization",
+			"@type": "ErickNunes",
 			name: "Freelancer",
 		},
 		sameAs: [
@@ -68,27 +73,20 @@ export default function RootLayout({
 		description:
 			"Desenvolvedor e designer web especializado em experiências digitais modernas e de alto desempenho.",
 		address: {
-			"@type": "PostalAddress",
 			addressLocality: "São Paulo",
 			addressCountry: "BR",
 		},
 	};
 
 	const structuredDataWebsite = {
-		"@context": "https://schema.org",
 		"@type": "WebSite",
 		name: "Portfólio de Erick Nunes",
 		url: "https://www.erick-nunes-dev.com.br",
 		description:
-			"Portfólio profissional de Erick Nunes — desenvolvedor e designer web especializado em criação de sites modernos e responsivos.",
+			"Erick Nunes — desenvolvedor e designer web especializado em criação de sites modernos e responsivos.",
 		publisher: {
 			"@type": "Person",
 			name: "Erick Nunes de Araujo",
-		},
-		potentialAction: {
-			"@type": "SearchAction",
-			target: "https://www.erick-nunes-dev.com.br/?q={search_term_string}",
-			"query-input": "required name=search_term_string",
 		},
 		inLanguage: "pt-BR",
 	};

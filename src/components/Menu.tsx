@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Typography from "./ui/Typography";
+import Link from "next/link";
 
 export default function Menu() {
 	const [toggleMenu, setToggleMenu] = useState(false);
@@ -28,7 +29,7 @@ export default function Menu() {
 
 	return (
 		<>
-			<nav className="mix-blend-difference text-white fixed top-0 w-full h-18 flex justify-between items-center px-8 z-99">
+			<nav className="mix-blend-difference text-white absolute top-0 w-full h-18 flex justify-between items-center px-8 z-99">
 				<div className="relative flex flex-col items-baseline">
 					<Typography
 						variant="caption"
@@ -66,19 +67,19 @@ export default function Menu() {
 					toggleMenu ? "h-full" : "h-0"
 				} flex flex-col justify-center items-center top-0 w-full bg-[rgb(255,255,244)] text-black z-9 overflow-hidden transition-all delay-200`}
 			>
-				<a href="/" className="mb-10 hover:scale-120">
+				<Link href="/" className="mb-10 hover:scale-120">
 					<Typography variant="subtitle">inicio</Typography>
-				</a>
-				<a href="/form" className="mb-10 hover:scale-120">
+				</Link>
+				<Link href="/form" className="mb-10 hover:scale-120">
 					<Typography variant="subtitle">contato</Typography>
-				</a>
-				<a
+				</Link>
+				<Link
 					href="https://github.com/erickNA2"
 					target="_blank"
 					className="mb-10 hover:scale-120"
 				>
 					<Typography variant="subtitle">Git-hub</Typography>
-				</a>
+				</Link>
 				<Typography variant="body" className="mt-10 text-black">
 					Work in progress...
 				</Typography>

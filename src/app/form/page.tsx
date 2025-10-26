@@ -35,7 +35,6 @@ const formSchema = z.object({
 	tipo_site: z.string(),
 	link_site: z.string().min(1).optional(),
 	nome_cliente: z.string().min(1),
-	nome_empresa: z.string().min(1),
 	email_cliente: z.string(),
 	descricao: z.string().optional(),
 	termos: z.boolean(),
@@ -96,7 +95,6 @@ export default function MyForm() {
 				tipo_site: values.tipo_site,
 				link_site: values.link_site,
 				nome_cliente: values.nome_cliente,
-				nome_empresa: values.nome_empresa,
 				email_cliente: values.email_cliente,
 				descricao: values.descricao,
 				termos: values.termos,
@@ -242,7 +240,7 @@ export default function MyForm() {
 						name="nome_cliente"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Nome</FormLabel>
+								<FormLabel>Nome*</FormLabel>
 								<FormControl>
 									<Input
 										placeholder="Nome"
@@ -260,31 +258,10 @@ export default function MyForm() {
 
 					<FormField
 						control={form.control}
-						name="nome_empresa"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Nome da Empresa</FormLabel>
-								<FormControl>
-									<Input
-										placeholder="Empresa"
-										type=""
-										{...field}
-									/>
-								</FormControl>
-								<FormDescription>
-									Nome de sua empresa ou marca
-								</FormDescription>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
-
-					<FormField
-						control={form.control}
 						name="email_cliente"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Email</FormLabel>
+								<FormLabel>Email*</FormLabel>
 								<FormControl>
 									<Input
 										placeholder="Email"

@@ -9,7 +9,6 @@ type data = {
     tipo_site: string,
     link_site?: string | undefined,
     nome_cliente: string,
-    nome_empresa: string,
     email_cliente: string,
     descricao?: string | undefined,
     termos: boolean,
@@ -23,7 +22,6 @@ export const sendEmail = async (data: data) => {
         <h2>Nova requisição de projeto</h2>
         <p><strong>Nome do cliente:</strong> ${data.nome_cliente}</p>
         <p><strong>Email do cliente:</strong> ${data.email_cliente}</p>
-        ${data.nome_empresa ? `<p><strong>Empresa:</strong> ${data.nome_empresa}</p>` : ""}
         ${data.segmento ? `<p><strong>Segmento:</strong> ${data.segmento}</p>` : ""}
         ${data.tipo_site ? `<p><strong>Tipo de site:</strong> ${data.tipo_site}</p>` : ""}
         ${data.descricao ? `<p><strong>Descrição:</strong> ${data.descricao}</p>` : ""}

@@ -75,7 +75,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="relative h-2/3 md:h-1/2 w-full grid gap-2 grid-cols-1 md:grid-cols-4 grid-rows-4 md:grid-rows-1">
-					<div className="relative h-full w-full p-2 flex items-center justify-center">
+					<div className="relative h-full w-full p-2 md:pt-12 flex items-center justify-center">
 						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
 							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#91eaff] to-[#ffc5c4] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
 							<CardHeader>
@@ -142,7 +142,7 @@ export default function Home() {
 						</Card>
 					</div>
 
-					<div className="relative h-full w-full p-2 flex items-center justify-center">
+					<div className="relative h-full w-full p-2 md:pt-12 flex items-center justify-center">
 						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
 							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#91eaff] to-[#ffc5c4] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
 							<CardHeader>
