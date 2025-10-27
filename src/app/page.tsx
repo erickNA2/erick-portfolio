@@ -21,8 +21,12 @@ export default function Home() {
 			>
 				<AnimatedBg></AnimatedBg>
 				<div className="mix-blend-difference text-white md:col-span-3 flex flex-col justify-center items-center md:items-baseline align-middle md:align-baseline">
-					<Typography variant="title">erick</Typography>
-					<Typography variant="title">Nunes</Typography>
+					<Typography variant="title" className="lowercase">
+						erick
+					</Typography>
+					<Typography variant="title" className="capitalize">
+						Nunes
+					</Typography>
 					<div className="relative  w-full flex justify-between items-center px-4">
 						<Typography variant="caption">Designer</Typography>
 						<Typography variant="caption">Web</Typography>
