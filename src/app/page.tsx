@@ -51,10 +51,10 @@ export default function Home() {
 
 			<section
 				id="#services"
-				className="relative z-2 min-h-screen md:h-[140vh] w-full bg-[#111111] px-10"
+				className="relative z-2 min-h-[110vh] md:h-screen w-full bg-[#111111] p-10"
 			>
-				<div className="relative h-auto py-4 md:py-0 md:h-1/2 w-full grid gap-1 grid-cols-1 md:grid-cols-3 grid-rows-2 md:grid-rows-1 text-neutral-50 text-center md:text-left">
-					<div className="relative h-full w-full md:w-2/3 flex flex-col align-center justify-center col-span-2">
+				<div className="relative h-auto py-4 md:py-0 md:h-1/2 w-full grid gap-1 grid-cols-1 md:grid-cols-5 grid-rows-2 md:grid-rows-1 text-neutral-50 text-center md:text-left">
+					<div className="relative h-full w-full md:w-2/3 flex flex-col align-center justify-center col-span-3">
 						<Typography
 							variant="caption"
 							className={"uppercase opacity-50"}
@@ -65,11 +65,8 @@ export default function Home() {
 							como posso te ajudar com seus objetivos
 						</Typography>
 					</div>
-					<div className="relative h-full w-full flex flex-col items-center justify-center p-4">
-						<Typography
-							variant="body"
-							className={"opacity-80 md:mt-30"}
-						>
+					<div className="relative h-full w-full flex flex-col items-center justify-center p-4 col-span-2">
+						<Typography variant="body" className={"opacity-80"}>
 							Meu foco é entender suas metas e transformá-las em
 							soluções digitais que geram resultado. Com design
 							estratégico e desenvolvimento moderno, crio
@@ -79,7 +76,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="relative h-2/3 md:h-1/2 w-full grid gap-2 grid-cols-1 md:grid-cols-4 grid-rows-4 md:grid-rows-1">
-					<div className="relative h-full w-full p-2 md:pt-12 flex items-center justify-center">
+					<div className="relative h-full w-full p-2 flex items-center justify-center">
 						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
 							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#91eaff] to-[#ffc5c4] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
 							<CardHeader>
@@ -146,7 +143,7 @@ export default function Home() {
 						</Card>
 					</div>
 
-					<div className="relative h-full w-full p-2 md:pt-12 flex items-center justify-center">
+					<div className="relative h-full w-full p-2 flex items-center justify-center">
 						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
 							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#91eaff] to-[#ffc5c4] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
 							<CardHeader>
@@ -213,6 +210,256 @@ export default function Home() {
 						</Card>
 					</div>
 				</div>
+			</section>
+
+			<section className="relative w-screen h-[180vh] md:h-screen flex flex-col items-center justify-center z-2">
+				<div className="relative h-full w-screen grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 bg-[#111111]">
+					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline px-10 md:px-18 text-white">
+						<div className="relative w-full h-auto flex flex-col justify-center items-baseline space-y-2">
+							<Typography
+								variant="bodytitle"
+								className="w-full lowercase text-center md:text-left"
+							>
+								onepager template
+							</Typography>
+							<Typography
+								variant="body"
+								className="text-center md:text-left"
+							>
+								Template profissional e responsivo focado na
+								conversão de clientes, simplificação do contato
+								com clientes e presença digital
+							</Typography>
+						</div>
+
+						<div className="relative w-full h-2/3">
+							<div className="absolute left-0 bottom-0 w-1/2 flex items-center justify-center space-x-8 z-10 ml-1">
+								<Typography
+									variant="caption"
+									className="text-left opacity-70"
+								>
+									<span className="font-semibold">
+										Importante!
+									</span>{" "}
+									este site não realiza transações, para
+									comprar o template entre em{" "}
+									<Link
+										href={"/form"}
+										className="text-blue-500 hover:underline"
+									>
+										contato.
+									</Link>
+								</Typography>
+								{/* <div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div>
+								<div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div> */}
+							</div>
+
+							<div className="absolute right-0 bottom-0">
+								<Typography
+									variant="bodytitle"
+									className="font-bold"
+								>
+									R$619,99
+								</Typography>
+							</div>
+
+							<div className="relative w-full h-full flex flex-col items-baseline justify-center space-y-4">
+								<Typography
+									variant="bodytitle"
+									className=" w-full lowercase text-center md:text-left"
+								>
+									inclui
+								</Typography>
+								<ul className="relative space-y-2 text-white px-2 text-center md:text-left">
+									<li>
+										<Typography variant="body">
+											Instalação do template em sua
+											hospedagem
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Configuração de dominio para
+											hospedagem e google search console
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											SEO personalizado, palavras chave,
+											titulos, meta dados e vinculo de
+											pesquisa com redes sociais e
+											profissionais
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Implementação da identidade visual
+											da marca, cores, textos, mensagens e
+											cultura
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Sete dias de suporte após a compra
+										</Typography>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div className="relative w-full h-full flex items-center justify-center">
+						<div className="relative mt-8 shadow-2xl h-[90%] w-[90%] border-6 border-[#91ebff6b] rounded-md">
+							<video
+								autoPlay
+								muted
+								loop
+								width="600"
+								height="800"
+								controls
+								preload="none"
+								className="relative h-full w-full object-contain rounded-md"
+							>
+								<source
+									src="/video/navigation.mp4"
+									type="video/mp4"
+								/>
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</div>
+				</div>
+				<div className="relative w-full md:w-1/2 h-auto flex flex-col items-center justify-center mix-blend-difference text-neutral-800"></div>
+
+				{/* <div className="relative w-full h-auto md:h-[340px] grid grid-cols-1 md:grid-cols-3 grid-rows-3 md:grid-rows-1 my-6 px-10 gap-4">
+					<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden p-1">
+						<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
+						<CardHeader>
+							<CardTitle>
+								<Typography
+									variant="bodytitle"
+									className="lowercase"
+								>
+									Básico
+								</Typography>
+							</CardTitle>
+							<CardDescription className="p-2">
+								<ul className="relative space-y-2 text-black list-disc">
+									<li>
+										<Typography variant="body">
+											Instalação
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Personalização simples
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Entrega pronta para hospedagem
+										</Typography>
+									</li>
+								</ul>
+							</CardDescription>
+						</CardHeader>
+						<CardContent>
+							<Typography variant="bodytitle">
+								R$280,00
+							</Typography>
+						</CardContent>
+					</Card>
+
+					<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden p-1">
+						<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
+						<CardHeader>
+							<CardTitle>
+								<Typography
+									variant="bodytitle"
+									className="lowercase"
+								>
+									Intermediario
+								</Typography>
+							</CardTitle>
+							<CardDescription className="p-2">
+								<ul className="relative space-y-2 text-black list-disc">
+									<li>
+										<Typography variant="body">
+											Tudo do Pacote Básico
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Copywriting leve para seções
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Edição de até 5 seções +
+											reorganização estrutural
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Adição de links/CTA estratégicos
+										</Typography>
+									</li>
+								</ul>
+							</CardDescription>
+						</CardHeader>
+						<CardContent>
+							<Typography variant="bodytitle">
+								R$580,00
+							</Typography>
+						</CardContent>
+					</Card>
+
+					<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden p-1">
+						<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
+						<CardHeader>
+							<CardTitle>
+								<Typography
+									variant="bodytitle"
+									className="lowercase"
+								>
+									Premium
+								</Typography>
+							</CardTitle>
+							<CardDescription className="p-2">
+								<ul className="relative space-y-2 text-black list-disc">
+									<li>
+										<Typography variant="body">
+											Tudo do pacote Intermediario
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Copywriting completo + storytelling
+											da marca
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Criação/adição de novas seções se
+											necessário
+										</Typography>
+									</li>
+									<li>
+										<Typography variant="body">
+											Publicação e 3 mêses de hospedagem +
+											30 dias de suporte gratis
+										</Typography>
+									</li>
+								</ul>
+							</CardDescription>
+						</CardHeader>
+						<CardContent>
+							<Typography variant="bodytitle">
+								R$1400,00
+							</Typography>
+						</CardContent>
+					</Card>
+				</div> */}
 			</section>
 		</>
 	);

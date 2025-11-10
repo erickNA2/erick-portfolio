@@ -29,7 +29,7 @@ export default function Menu() {
 
 	return (
 		<>
-			<nav className="mix-blend-difference text-white absolute top-0 w-full h-18 flex justify-between items-center px-8 z-99">
+			<nav className="mix-blend-difference text-white absolute top-0 w-full h-20 flex justify-between items-center px-8 pb-8 z-99">
 				<div className="relative flex flex-col items-baseline">
 					<Typography
 						variant="caption"
@@ -80,8 +80,11 @@ export default function Menu() {
 				>
 					<Typography variant="subtitle">Git-hub</Typography>
 				</Link>
+				<Link href={"/legal"} className="mb-10 hover:scale-120">
+					<Typography variant="subtitle">termos legais</Typography>
+				</Link>
 				<Typography variant="body" className="mt-10 text-black">
-					Work in progress...
+					Trabalho em andamento...
 				</Typography>
 			</div>
 		</>
