@@ -220,7 +220,7 @@ export default function Home() {
 
 			<section className="relative w-screen h-[120vh] md:h-screen flex flex-col items-center justify-center z-2">
 				<div className="relative h-full w-screen grid gap-8 md:gap-0 grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 bg-[#111111]">
-					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline px-10 md:px-18 text-neutral-100">
+					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline px-10 py-10 md:px-18 text-neutral-100">
 						<div className="absolute right-8 md:right-0 bottom-0">
 							<Typography
 								variant="bodytitle"
@@ -314,7 +314,7 @@ export default function Home() {
 					</div>
 
 					<div className="relative w-full h-full flex items-center justify-center">
-						<div className="relative mt-8 shadow-2xl h-[90%] w-[90%] border-6 border-[#91ebff6b] rounded-md">
+						<div className="relative mt-8 shadow-2xl h-[92%] w-[90%] border-6 border-[#91ebff6b] rounded-md">
 							<video
 								autoPlay
 								muted

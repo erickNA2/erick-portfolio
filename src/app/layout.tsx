@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Erick Nunes | Desenvolvedor e Designer Web",
 		description:
-			"Conheça o portfólio profissional de Erick Nunes — desenvolvedor e designer web especializado em experiências digitais modernas e eficientes.",
+			"Conheça o portfólio profissional de Erick Nunes de Araujo — desenvolvedor e designer web especializado em experiências digitais modernas e eficientes.",
 		url: "https://www.erick-nunes-dev.com.br",
 		siteName: "Portfólio de Erick Nunes",
 		images: [
@@ -67,7 +67,7 @@ export default function RootLayout({
 			name: "Freelancer",
 		},
 		sameAs: [
-			"https://www.linkedin.com/in/erick-nunes-a243742b1",
+			"https://www.linkedin.com/in/erick-nunes-araujo",
 			"https://github.com/erickNA2",
 		],
 		description:
@@ -83,7 +83,7 @@ export default function RootLayout({
 		name: "Portfólio de Erick Nunes",
 		url: "https://www.erick-nunes-dev.com.br",
 		description:
-			"Erick Nunes — desenvolvedor e designer web especializado em criação de sites modernos e responsivos.",
+			"Erick Nunes de Araujo — desenvolvedor e designer web especializado em criação de sites modernos e responsivos.",
 		publisher: {
 			"@type": "Person",
 			name: "Erick Nunes de Araujo",
