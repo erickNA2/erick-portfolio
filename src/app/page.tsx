@@ -53,7 +53,7 @@ export default function Home() {
 				id="#services"
 				className="relative z-2 min-h-[110vh] md:h-screen w-full bg-[#111111] p-10"
 			>
-				<div className="relative h-auto py-4 md:py-0 md:h-1/2 w-full grid gap-1 grid-cols-1 md:grid-cols-5 grid-rows-2 md:grid-rows-1 text-neutral-50 text-center md:text-left">
+				<div className="relative h-auto py-4 md:py-0 md:h-1/2 w-full grid gap-1 grid-cols-1 md:grid-cols-5 grid-rows-2 md:grid-rows-1 text-neutral-100 text-center md:text-left">
 					<div className="relative h-full w-full md:w-2/3 flex flex-col align-center justify-center col-span-3">
 						<Typography
 							variant="caption"
@@ -61,12 +61,18 @@ export default function Home() {
 						>
 							serviços
 						</Typography>
-						<Typography variant="bodytitle">
+						<Typography
+							variant="bodytitle"
+							className="font-semibold"
+						>
 							como posso te ajudar com seus objetivos
 						</Typography>
 					</div>
 					<div className="relative h-full w-full flex flex-col items-center justify-center p-4 col-span-2">
-						<Typography variant="body" className={"opacity-80"}>
+						<Typography
+							variant="body"
+							className="opacity-80 wrap-break-word"
+						>
 							Meu foco é entender suas metas e transformá-las em
 							soluções digitais que geram resultado. Com design
 							estratégico e desenvolvimento moderno, crio
@@ -212,19 +218,28 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="relative w-screen h-[180vh] md:h-screen flex flex-col items-center justify-center z-2">
-				<div className="relative h-full w-screen grid grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 bg-[#111111]">
-					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline px-10 md:px-18 text-white">
+			<section className="relative w-screen h-[120vh] md:h-screen flex flex-col items-center justify-center z-2">
+				<div className="relative h-full w-screen grid gap-8 md:gap-0 grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 bg-[#111111]">
+					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline px-10 md:px-18 text-neutral-100">
+						<div className="absolute right-8 md:right-0 bottom-0">
+							<Typography
+								variant="bodytitle"
+								className="font-bold"
+							>
+								R$619,99
+							</Typography>
+						</div>
+
 						<div className="relative w-full h-auto flex flex-col justify-center items-baseline space-y-2">
 							<Typography
 								variant="bodytitle"
-								className="w-full lowercase text-center md:text-left"
+								className="w-full lowercase text-center md:text-left font-semibold"
 							>
 								onepager template
 							</Typography>
 							<Typography
 								variant="body"
-								className="text-center md:text-left"
+								className="text-center md:text-left font-light"
 							>
 								Template profissional e responsivo focado na
 								conversão de clientes, simplificação do contato
@@ -232,11 +247,11 @@ export default function Home() {
 							</Typography>
 						</div>
 
-						<div className="relative w-full h-2/3">
-							<div className="absolute left-0 bottom-0 w-1/2 flex items-center justify-center space-x-8 z-10 ml-1">
+						<div className="relative w-full h-full">
+							<div className="absolute left-0 bottom-0 w-42 md:w-50 flex items-center justify-center space-x-8 z-10 md:ml-1">
 								<Typography
 									variant="caption"
-									className="text-left opacity-70"
+									className="text-left opacity-70 font-extralight wrap-break-word"
 								>
 									<span className="font-semibold">
 										Importante!
@@ -253,24 +268,14 @@ export default function Home() {
 								{/* <div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div>
 								<div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div> */}
 							</div>
-
-							<div className="absolute right-0 bottom-0">
-								<Typography
-									variant="bodytitle"
-									className="font-bold"
-								>
-									R$619,99
-								</Typography>
-							</div>
-
 							<div className="relative w-full h-full flex flex-col items-baseline justify-center space-y-4">
 								<Typography
 									variant="bodytitle"
-									className=" w-full lowercase text-center md:text-left"
+									className=" w-full lowercase text-center md:text-left font-semibold"
 								>
 									inclui
 								</Typography>
-								<ul className="relative space-y-2 text-white px-2 text-center md:text-left">
+								<ul className="relative md:w-110 wrap-break-word space-y-2 md:space-y-4 text-white px-2 text-center md:text-left font-light">
 									<li>
 										<Typography variant="body">
 											Instalação do template em sua
