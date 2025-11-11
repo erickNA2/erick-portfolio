@@ -21,11 +21,13 @@ interface TextProps {
 }
 
 const variantClasses: Record<TextVariant, string> = {
-	title: "text-[5.8rem] md:text-[7rem] captalize text-balance font-[Major_Mono_Display] tracking-wide",
-	subtitle: "text-[1.2rem] md:text-[1.4rem] font-[Major_Mono_Display]",
-	bodytitle: "text-[1.2rem] md:text-[2.2rem] font-[Major_Mono_Display]",
-	body: "text-[0.9rem] md:text-[1rem] font-[Inter]",
-	caption: "text-[.7rem] md:text-[.8rem] font-[Inter]",
+	title: "text-[5.8rem] md:text-[7rem] captalize text-balance font-[Major_Mono_Display] tracking-wide wrap-break-word",
+	subtitle:
+		"text-[1.2rem] md:text-[1.4rem] font-[Major_Mono_Display] wrap-break-word",
+	bodytitle:
+		"text-[1.2rem] md:text-[2.2rem] font-[Major_Mono_Display] wrap-break-word",
+	body: "text-[0.9rem] md:text-[1rem] font-[Inter] wrap-break-word",
+	caption: "text-[.7rem] md:text-[.8rem] font-[Inter] wrap-break-word",
 };
 
 export default function Typography({

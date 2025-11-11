@@ -69,10 +69,7 @@ export default function Home() {
 						</Typography>
 					</div>
 					<div className="relative h-full w-full flex flex-col items-center justify-center p-4 col-span-2">
-						<Typography
-							variant="body"
-							className="opacity-80 wrap-break-word"
-						>
+						<Typography variant="body" className="opacity-80 ">
 							Meu foco é entender suas metas e transformá-las em
 							soluções digitais que geram resultado. Com design
 							estratégico e desenvolvimento moderno, crio
@@ -219,17 +216,8 @@ export default function Home() {
 			</section>
 
 			<section className="relative w-screen h-[120vh] md:h-screen flex flex-col items-center justify-center z-2">
-				<div className="relative h-full w-screen grid gap-8 md:gap-0 grid-cols-1 md:grid-cols-2 grid-rows-2 md:grid-rows-1 bg-[#111111]">
-					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline px-10 py-10 md:px-18 text-neutral-100">
-						<div className="absolute right-8 md:right-0 bottom-0">
-							<Typography
-								variant="bodytitle"
-								className="font-bold"
-							>
-								R$619,99
-							</Typography>
-						</div>
-
+				<div className="relative h-full w-screen grid gap-8 md:gap-0 grid-cols-1 md:grid-cols-2 grid-rows-2 px-10 md:grid-rows-1 bg-[#111111]">
+					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline py-10 text-neutral-100">
 						<div className="relative w-full h-auto flex flex-col justify-center items-baseline space-y-2">
 							<Typography
 								variant="bodytitle"
@@ -248,26 +236,6 @@ export default function Home() {
 						</div>
 
 						<div className="relative w-full h-full">
-							<div className="absolute left-0 bottom-0 w-42 md:w-50 flex items-center justify-center space-x-8 z-10 md:ml-1">
-								<Typography
-									variant="caption"
-									className="text-left opacity-70 font-extralight wrap-break-word"
-								>
-									<span className="font-semibold">
-										Importante!
-									</span>{" "}
-									este site não realiza transações, para
-									comprar o template entre em{" "}
-									<Link
-										href={"/form"}
-										className="text-blue-500 hover:underline"
-									>
-										contato.
-									</Link>
-								</Typography>
-								{/* <div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div>
-								<div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div> */}
-							</div>
 							<div className="relative w-full h-full flex flex-col items-baseline justify-center space-y-4">
 								<Typography
 									variant="bodytitle"
@@ -275,7 +243,7 @@ export default function Home() {
 								>
 									inclui
 								</Typography>
-								<ul className="relative md:w-110 wrap-break-word space-y-2 md:space-y-4 text-white px-2 text-center md:text-left font-light">
+								<ul className="relative md:w-110 space-y-2 md:space-y-4 text-white text-center md:text-left font-light">
 									<li>
 										<Typography variant="body">
 											Instalação do template em sua
@@ -310,6 +278,36 @@ export default function Home() {
 									</li>
 								</ul>
 							</div>
+						</div>
+
+						<div className="relative w-full h-auto flex items-center justify-between">
+							<div className="relative w-42 md:w-50 z-10">
+								<Typography
+									variant="caption"
+									className="text-left opacity-70 font-extralight "
+								>
+									<span className="font-semibold">
+										Importante!
+									</span>{" "}
+									este site não realiza transações, para
+									comprar o template entre em{" "}
+									<Link
+										href={"/form"}
+										className="text-blue-500 hover:underline"
+									>
+										contato.
+									</Link>
+								</Typography>
+								{/* <div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div>
+								<div className="relative w-4 h-4 bg-[#ffc5c4] rounded-full hover:scale-140 transition-all duration-200 ease-in-out"></div> */}
+							</div>
+
+							<Typography
+								variant="bodytitle"
+								className="font-bold"
+							>
+								R$619,99
+							</Typography>
 						</div>
 					</div>
 
