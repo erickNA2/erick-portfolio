@@ -27,10 +27,10 @@ export default function Home() {
 					<Typography variant="title" className="capitalize">
 						Nunes
 					</Typography>
-					<div className="relative  w-full flex justify-between items-center px-4">
-						<Typography variant="caption">Designer</Typography>
-						<Typography variant="caption">Web</Typography>
-						<Typography variant="caption">Developer</Typography>
+					<div className="relative w-full flex justify-center md:justify-start items-center px-4">
+						<Typography variant="caption" className="font-bold">
+							Full Stack Developer | UX/UI Designer
+						</Typography>
 					</div>
 				</div>
 				<div className="mix-blend-difference text-white md:col-span-2 flex flex-col justify-center items-center align-middle ">
@@ -51,7 +51,7 @@ export default function Home() {
 
 			<section
 				id="#services"
-				className="relative z-2 min-h-[110vh] md:h-screen w-full bg-[#111111] p-10"
+				className="relative z-2 min-h-[110vh] md:h-screen w-full bg-[#111111f4] p-10 rounded-t-lg"
 			>
 				<div className="relative h-auto py-4 md:py-0 md:h-1/2 w-full grid gap-1 grid-cols-1 md:grid-cols-5 grid-rows-2 md:grid-rows-1 text-neutral-100 text-center md:text-left">
 					<div className="relative h-full w-full md:w-2/3 flex flex-col align-center justify-center col-span-3">
@@ -215,10 +215,10 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="relative w-screen h-[120vh] md:h-screen flex flex-col items-center justify-center z-2">
-				<div className="relative h-full w-screen grid gap-8 md:gap-0 grid-cols-1 md:grid-cols-2 grid-rows-2 px-10 md:grid-rows-1 bg-[#111111]">
+			<section className="relative w-screen h-[130vh] md:h-screen flex flex-col items-center justify-center bg-[#111111f4] z-2">
+				<div className="relative h-full w-screen grid gap-8 md:gap-0 grid-cols-1 md:grid-cols-2 grid-rows-2 px-10 md:grid-rows-1 ">
 					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline py-10 text-neutral-100">
-						<div className="relative w-full h-auto flex flex-col justify-center items-baseline space-y-2">
+						<div className="relative w-full h-auto flex flex-col justify-center items-baseline space-y-1">
 							<Typography
 								variant="bodytitle"
 								className="w-full lowercase text-center md:text-left font-semibold"
@@ -236,27 +236,27 @@ export default function Home() {
 						</div>
 
 						<div className="relative w-full h-full">
-							<div className="relative w-full h-full flex flex-col items-baseline justify-center space-y-4">
+							<div className="relative w-full h-full flex flex-col items-baseline justify-center space-y-1">
 								<Typography
 									variant="bodytitle"
 									className=" w-full lowercase text-center md:text-left font-semibold"
 								>
 									inclui
 								</Typography>
-								<ul className="relative md:w-110 space-y-2 md:space-y-4 text-white text-center md:text-left font-light">
-									<li>
+								<ul className="relative md:w-110 space-y-4 md:space-y-6 text-white text-left font-light">
+									<li className="border-b-1 border-neutral-500">
 										<Typography variant="body">
-											Instalação do template em sua
-											hospedagem
+											Instalação e configuração do
+											template conforme suas necessidades
 										</Typography>
 									</li>
-									<li>
+									<li className="border-b-1 border-neutral-500">
 										<Typography variant="body">
 											Configuração de dominio para
 											hospedagem e google search console
 										</Typography>
 									</li>
-									<li>
+									<li className="border-b-1 border-neutral-500">
 										<Typography variant="body">
 											SEO personalizado, palavras chave,
 											titulos, meta dados e vinculo de
@@ -264,14 +264,14 @@ export default function Home() {
 											profissionais
 										</Typography>
 									</li>
-									<li>
+									<li className="border-b-1 border-neutral-500">
 										<Typography variant="body">
 											Implementação da identidade visual
 											da marca, cores, textos, mensagens e
 											cultura
 										</Typography>
 									</li>
-									<li>
+									<li className="border-b-1 border-neutral-500">
 										<Typography variant="body">
 											Sete dias de suporte após a compra
 										</Typography>
@@ -280,8 +280,8 @@ export default function Home() {
 							</div>
 						</div>
 
-						<div className="relative w-full h-auto flex items-center justify-between">
-							<div className="relative w-42 md:w-50 z-10">
+						<div className="relative w-full h-auto flex items-center justify-between mt-4">
+							<div className="relative w-[60%] z-10">
 								<Typography
 									variant="caption"
 									className="text-left opacity-70 font-extralight "
@@ -306,7 +306,7 @@ export default function Home() {
 								variant="bodytitle"
 								className="font-bold"
 							>
-								R$619,99
+								R$249,99
 							</Typography>
 						</div>
 					</div>
@@ -332,137 +332,6 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full md:w-1/2 h-auto flex flex-col items-center justify-center mix-blend-difference text-neutral-800"></div>
-
-				{/* <div className="relative w-full h-auto md:h-[340px] grid grid-cols-1 md:grid-cols-3 grid-rows-3 md:grid-rows-1 my-6 px-10 gap-4">
-					<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden p-1">
-						<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
-						<CardHeader>
-							<CardTitle>
-								<Typography
-									variant="bodytitle"
-									className="lowercase"
-								>
-									Básico
-								</Typography>
-							</CardTitle>
-							<CardDescription className="p-2">
-								<ul className="relative space-y-2 text-black list-disc">
-									<li>
-										<Typography variant="body">
-											Instalação
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Personalização simples
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Entrega pronta para hospedagem
-										</Typography>
-									</li>
-								</ul>
-							</CardDescription>
-						</CardHeader>
-						<CardContent>
-							<Typography variant="bodytitle">
-								R$280,00
-							</Typography>
-						</CardContent>
-					</Card>
-
-					<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden p-1">
-						<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
-						<CardHeader>
-							<CardTitle>
-								<Typography
-									variant="bodytitle"
-									className="lowercase"
-								>
-									Intermediario
-								</Typography>
-							</CardTitle>
-							<CardDescription className="p-2">
-								<ul className="relative space-y-2 text-black list-disc">
-									<li>
-										<Typography variant="body">
-											Tudo do Pacote Básico
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Copywriting leve para seções
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Edição de até 5 seções +
-											reorganização estrutural
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Adição de links/CTA estratégicos
-										</Typography>
-									</li>
-								</ul>
-							</CardDescription>
-						</CardHeader>
-						<CardContent>
-							<Typography variant="bodytitle">
-								R$580,00
-							</Typography>
-						</CardContent>
-					</Card>
-
-					<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden p-1">
-						<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
-						<CardHeader>
-							<CardTitle>
-								<Typography
-									variant="bodytitle"
-									className="lowercase"
-								>
-									Premium
-								</Typography>
-							</CardTitle>
-							<CardDescription className="p-2">
-								<ul className="relative space-y-2 text-black list-disc">
-									<li>
-										<Typography variant="body">
-											Tudo do pacote Intermediario
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Copywriting completo + storytelling
-											da marca
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Criação/adição de novas seções se
-											necessário
-										</Typography>
-									</li>
-									<li>
-										<Typography variant="body">
-											Publicação e 3 mêses de hospedagem +
-											30 dias de suporte gratis
-										</Typography>
-									</li>
-								</ul>
-							</CardDescription>
-						</CardHeader>
-						<CardContent>
-							<Typography variant="bodytitle">
-								R$1400,00
-							</Typography>
-						</CardContent>
-					</Card>
-				</div> */}
 			</section>
 		</>
 	);

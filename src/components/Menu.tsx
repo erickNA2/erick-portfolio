@@ -56,7 +56,7 @@ export default function Menu() {
 						className={`${
 							toggleMenu ? "bg-black" : "bg-none"
 						} w-6 h-6 block border-1 border-white transition-all duration-400 ease-in-out delay-75 
-          hover:bg-white`}
+          hover:bg-white fixed`}
 					></span>
 				</div>
 			</nav>
