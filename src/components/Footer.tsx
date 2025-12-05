@@ -1,5 +1,5 @@
 import Typography from "./ui/Typography";
-import { FaLinkedin, FaMailBulk, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -9,18 +9,19 @@ export default function Footer() {
 				<Link
 					href={"https://www.linkedin.com/in/erick-nunes-a243742b1"}
 					target="_blank"
+					className="hover:scale-120 transition-all duration-200 ease-in"
 				>
 					<FaLinkedin
 						size={24}
 						color="white"
-						className="hover:scale-120 transition-all duration-200 ease-in"
 					></FaLinkedin>
 				</Link>
 				<Link
-					href={"mailto:araujoerick.n1@gmail.com"}
+					href={"https://www.instagram.com/ericknunesdev/"}
+					target="_blank"
 					className="hover:scale-120 transition-all duration-200 ease-in"
 				>
-					<FaMailBulk size={24} color="white"></FaMailBulk>
+					<FaInstagram size={24} color="white"></FaInstagram>
 				</Link>
 				<Link
 					href={"https://github.com/erickNA2"}

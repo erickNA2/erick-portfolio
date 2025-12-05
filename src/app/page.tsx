@@ -51,10 +51,10 @@ export default function Home() {
 
 			<section
 				id="#services"
-				className="relative z-2 min-h-[110vh] md:h-screen w-full bg-[#111111f4] p-10 rounded-t-lg"
+				className="relative z-2 h-[180vh] md:h-screen w-full bg-[#111111] px-10 rounded-t-lg"
 			>
-				<div className="relative h-auto py-4 md:py-0 md:h-1/2 w-full grid gap-1 grid-cols-1 md:grid-cols-5 grid-rows-2 md:grid-rows-1 text-neutral-100 text-center md:text-left">
-					<div className="relative h-full w-full md:w-2/3 flex flex-col align-center justify-center col-span-3">
+				<div className="relative h-58 w-full flex items-center justify-center text-neutral-100 text-center">
+					<div className="relative h-full w-full md:w-2/3 flex flex-col items-center justify-center">
 						<Typography
 							variant="caption"
 							className={"uppercase opacity-50"}
@@ -65,21 +65,12 @@ export default function Home() {
 							variant="bodytitle"
 							className="font-semibold"
 						>
-							como posso te ajudar com seus objetivos
-						</Typography>
-					</div>
-					<div className="relative h-full w-full flex flex-col items-center justify-center p-4 col-span-2">
-						<Typography variant="body" className="opacity-80 ">
-							Meu foco é entender suas metas e transformá-las em
-							soluções digitais que geram resultado. Com design
-							estratégico e desenvolvimento moderno, crio
-							experiências que comunicam valor e fortalecem a
-							presença online da sua marca.
+							muito além de um site eu construo sua presença digital para aumentar clientes credibilidade e resultados
 						</Typography>
 					</div>
 				</div>
-				<div className="relative h-2/3 md:h-1/2 w-full grid gap-2 grid-cols-1 md:grid-cols-4 grid-rows-4 md:grid-rows-1">
-					<div className="relative h-full w-full p-2 flex items-center justify-center">
+				<div className="relative h-2/3 md:h-1/2 w-full grid gap-2 grid-cols-1 md:grid-cols-3 grid-rows-3 md:grid-rows-1">
+					<div className="relative h-full w-full px-2 md:px-10 flex items-center justify-center">
 						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
 							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#91eaff] to-[#ffc5c4] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
 							<CardHeader>
@@ -91,21 +82,20 @@ export default function Home() {
 								<CardDescription>
 									<Typography variant="caption">
 										Criação e Manutenção
-									</Typography>
+									</Typography> 
 								</CardDescription>
 							</CardHeader>
 							<CardContent>
 								<Typography variant="body">
-									Criação de sites profissionais,
-									institucionais e landing pages otimizadas
-									para performance e conversão.
+									Criação de landing pages de alta performance, estruturadas para gerar leads 
+									qualificados e aumentar suas vendas. Projetos otimizados, rápidos e alinhados às necessidades do seu negócio.
 								</Typography>
 							</CardContent>
 							<CardFooter className="relative w-full flex items-center justify-center">
-								<Button className="relative w-[200px] h-[52px] flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition">
+								<Button className="relative w-full h-10 flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition">
 									<Link href={"/form"}>
-										<Typography variant="subtitle">
-											Agendar
+										<Typography variant="body">
+											Solicitar Orçamento
 										</Typography>
 									</Link>
 								</Button>
@@ -113,7 +103,7 @@ export default function Home() {
 						</Card>
 					</div>
 
-					<div className="relative h-full w-full p-2 flex items-center justify-center">
+					<div className="relative h-full w-full px-2 md:px-10 flex items-center justify-center">
 						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
 							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
 							<CardHeader>
@@ -130,15 +120,14 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<Typography variant="body">
-									Criação de interfaces intuitivas e visuais
-									modernos para sites e aplicações web.
+									Design de interfaces modernas, funcionais e estratégicas, garantindo uma experiência fluida para seus usuários e resultados melhores para o seu produto.
 								</Typography>
 							</CardContent>
 							<CardFooter className="relative w-full flex items-center justify-center">
-								<Button className="relative w-[200px] h-[52px] flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition">
+								<Button className="relative w-full h-10 flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition">
 									<Link href={"/form"}>
-										<Typography variant="subtitle">
-											Agendar
+										<Typography variant="body">
+											Solicitar Orçamento
 										</Typography>
 									</Link>
 								</Button>
@@ -146,7 +135,7 @@ export default function Home() {
 						</Card>
 					</div>
 
-					<div className="relative h-full w-full p-2 flex items-center justify-center">
+					<div className="relative h-full w-full px-2 md:px-10 flex items-center justify-center">
 						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
 							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#91eaff] to-[#ffc5c4] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
 							<CardHeader>
@@ -163,15 +152,14 @@ export default function Home() {
 							</CardHeader>
 							<CardContent>
 								<Typography variant="body">
-									Desenvolvimento de lojas virtuais otimizadas
-									e personalizadas para performance e vendas.
+									Desenvolvimento de lojas virtuais otimizadas para conversão, com integrações completas e configuração estratégica para aumentar suas vendas.
 								</Typography>
 							</CardContent>
 							<CardFooter className="relative w-full flex items-center justify-center">
-								<Button className="relative w-[200px] h-[52px] flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition">
+								<Button className="relative w-full h-10 flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition">
 									<Link href={"/form"}>
-										<Typography variant="subtitle">
-											Agendar
+										<Typography variant="body">
+											Solicitar Orçamento
 										</Typography>
 									</Link>
 								</Button>
@@ -179,43 +167,11 @@ export default function Home() {
 						</Card>
 					</div>
 
-					<div className="relative h-full w-full p-2 flex items-center justify-center">
-						<Card className="relative h-full w-full flex flex-col items-baseline justify-between border-none rounded-md overflow-hidden">
-							<div className="absolute top-0 left-0 w-full h-full bg-radial from-[#ffc5c4] to-[#91eaff] rounded-md opacity-90 transition-all duration-300 ease-in-out hover:scale-140 "></div>
-							<CardHeader>
-								<CardTitle>
-									<Typography variant="body">
-										Otimização de SEO
-									</Typography>
-								</CardTitle>
-								<CardDescription>
-									<Typography variant="caption">
-										Resultados e Pesquisas
-									</Typography>
-								</CardDescription>
-							</CardHeader>
-							<CardContent>
-								<Typography variant="body">
-									Suporte técnico contínuo para sites
-									existentes — correções, melhorias de
-									performance, segurança e SEO.
-								</Typography>
-							</CardContent>
-							<CardFooter className="relative w-full flex items-center justify-center">
-								<Button className="relative w-[200px] h-[52px] flex items-center justify-center hover:bg-white hover:text-black duration-400 ease-in-out transition">
-									<Link href={"/form"}>
-										<Typography variant="subtitle">
-											Agendar
-										</Typography>
-									</Link>
-								</Button>
-							</CardFooter>
-						</Card>
-					</div>
+					
 				</div>
 			</section>
 
-			<section className="relative w-screen h-[130vh] md:h-screen flex flex-col items-center justify-center bg-[#111111f4] z-2">
+			<section className="relative w-screen h-[130vh] md:h-screen flex flex-col items-center justify-center bg-[#111111] z-2">
 				<div className="relative h-full w-screen grid gap-8 md:gap-0 grid-cols-1 md:grid-cols-2 grid-rows-2 px-10 md:grid-rows-1 ">
 					<div className="relative w-full h-full order-last md:order-first flex flex-col justify-center items-baseline py-10 text-neutral-100">
 						<div className="relative w-full h-auto flex flex-col justify-center items-baseline space-y-1">

@@ -25,8 +25,8 @@ const variantClasses: Record<TextVariant, string> = {
 	subtitle:
 		"text-[1.2rem] md:text-[1.4rem] font-[Major_Mono_Display] wrap-break-word",
 	bodytitle:
-		"text-[1.2rem] md:text-[2.2rem] font-[Major_Mono_Display] wrap-break-word",
-	body: "text-[0.9rem] md:text-[1rem] font-[Inter] wrap-break-word",
+		"text-[1rem] md:text-[1.6rem] font-[Major_Mono_Display] wrap-break-word",
+	body: "text-[0.7rem] md:text-[0.8rem] font-[Inter] wrap-break-word",
 	caption: "text-[.7rem] md:text-[.8rem] font-[Inter] wrap-break-word",
 };
 
