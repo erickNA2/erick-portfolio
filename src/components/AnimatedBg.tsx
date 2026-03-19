@@ -25,7 +25,9 @@ function Triangle({ color, ...props }: TriangleProps) {
 
 	const geom = useMemo(() => {
 		const shapes = paths[0].toShapes(true);
-		return new THREE.ShapeGeometry(shapes);
+		const geometry = new THREE.ShapeGeometry(shapes);
+		geometry.computeBoundingBox();
+		return geometry;
 	}, [paths]);
 
 	useFrame((state) => {
@@ -38,33 +40,44 @@ function Triangle({ color, ...props }: TriangleProps) {
 	return (
 		<group ref={ref}>
 			<mesh geometry={geom} {...props}>
-				<meshBasicMaterial color={color} toneMapped={false} />
+				<meshBasicMaterial
+					color={color}
+					toneMapped={false}
+					fog={false}
+				/>
 			</mesh>
 		</group>
 	);
 }
 
-function Ground(props: any) {
+function Ground() {
 	const [floor, normal] = useTexture([
 		"/SurfaceImperfections003_1K_var1.jpg",
 		"/SurfaceImperfections003_1K_Normal.jpg",
 	]);
 
+	// Optimize textures
+	useMemo(() => {
+		floor.generateMipmaps = true;
+		floor.minFilter = THREE.LinearMipmapLinearFilter;
+		normal.generateMipmaps = true;
+		normal.minFilter = THREE.LinearMipmapLinearFilter;
+	}, [floor, normal]);
+
 	return (
 		<mesh rotation={[-Math.PI / 2, 0, Math.PI / 2]} position-y={-0.8}>
 			<planeGeometry args={[8, 8]} />
 			<MeshReflectorMaterial
-				resolution={1024}
-				mirror={1}
-				blur={[500, 100]}
-				mixBlur={12}
-				mixStrength={1.5}
-				color="#f0f0f0"
+				resolution={512}
+				mirror={0.8}
+				blur={[400, 100]}
+				mixBlur={10}
+				mixStrength={1.2}
+				color="#1a1a1a"
 				metalness={0}
 				roughnessMap={floor}
 				normalMap={normal}
 				normalScale={[2, 2]}
-				{...props}
 			/>
 		</mesh>
 	);
@@ -75,11 +88,16 @@ export default function AnimatedBg() {
 		<div className="fixed top-0 left-0 z-0 w-screen h-screen m-0 p-0">
 			<Canvas
 				dpr={[1, 1.5]}
-				camera={{ position: [-0.6, 0, 1] }}
+				camera={{ position: [-0.7, 0, 1], far: 1000 }}
+				gl={{
+					antialias: true,
+					alpha: true,
+					powerPreference: "default",
+				}}
 				className="relative w-full h-full"
 			>
 				<color attach="background" args={["rgb(11, 11, 11)"]} />
-				<ambientLight />
+				<ambientLight intensity={0.8} />
 				<Suspense fallback={null}>
 					<Triangle
 						color="#91eaff"
@@ -93,21 +111,20 @@ export default function AnimatedBg() {
 						rotation={[0, 0, Math.PI / 3]}
 					/>
 
-					{/* <Triangle color="#f2fedc" scale={0.009} position={[0, 3, -10]} rotation={[0, 0, Math.PI / 3]} />  */}
 					<Ground />
 
-					<EffectComposer multisampling={8}>
+					<EffectComposer multisampling={4}>
 						<Bloom
-							kernelSize={6}
-							luminanceThreshold={0}
-							luminanceSmoothing={1}
-							intensity={1}
+							kernelSize={4}
+							luminanceThreshold={0.1}
+							luminanceSmoothing={0.8}
+							intensity={0.8}
 						/>
 						<Bloom
-							kernelSize={KernelSize.HUGE}
-							luminanceThreshold={0}
-							luminanceSmoothing={0}
-							intensity={0.5}
+							kernelSize={KernelSize.LARGE}
+							luminanceThreshold={0.2}
+							luminanceSmoothing={0.5}
+							intensity={0.3}
 						/>
 					</EffectComposer>
 				</Suspense>
