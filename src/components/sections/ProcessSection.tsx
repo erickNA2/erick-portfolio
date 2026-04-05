@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@/components/ui/Typography";
-import Card from "../ui/Card";
+import Card from "@/components/ui/Card";
 import Link from "next/link";
 
 export default function ProcessSection() {
