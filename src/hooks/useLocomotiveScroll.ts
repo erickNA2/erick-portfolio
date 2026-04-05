@@ -8,12 +8,7 @@ export const useLocomotiveScroll = () => {
 
 	useEffect(() => {
 		if (typeof window !== "undefined") {
-			scrollRef.current = new LocomotiveScroll({
-				el: document.querySelector("[data-scroll-container]") as HTMLElement,
-				smooth: true,
-				multiplier: 1,
-				class: "is-revealed",
-			});
+			scrollRef.current = new LocomotiveScroll();
 
 			// Clean up on unmount
 			return () => {
@@ -28,7 +23,7 @@ export const useLocomotiveScroll = () => {
 	useEffect(() => {
 		const handleResize = () => {
 			if (scrollRef.current) {
-				scrollRef.current.update();
+				scrollRef.current.resize();
 			}
 		};
 
