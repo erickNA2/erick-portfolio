@@ -115,9 +115,11 @@ export default function RootLayout({
 			<body
 				className={`antialiased overflow-x-hidden w-screen bg-[#111111]`}
 			>
-				<Menu></Menu>
-				{children}
-				<Footer></Footer>
+				<div data-scroll-container className="w-full h-full">
+					<Menu></Menu>
+					{children}
+					<Footer></Footer>
+				</div>
 			</body>
 		</html>
 	);

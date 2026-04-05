@@ -1,7 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { useState, useRef, Suspense, useMemo } from "react";
+import { useState, useRef, Suspense, useMemo, useEffect } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import {
 	CameraShake,
@@ -84,17 +84,56 @@ function Ground() {
 }
 
 export default function AnimatedBg() {
+	const [isMobile, setIsMobile] = useState(false);
+	const [isLowEndDevice, setIsLowEndDevice] = useState(false);
+
+	useEffect(() => {
+		const checkDevice = () => {
+			const width = window.innerWidth;
+			const isMobileDevice = width < 768;
+			setIsMobile(isMobileDevice);
+
+			// Detect low-end devices
+			const isLowEnd =
+				width < 1024 || // Small screen
+				(navigator.hardwareConcurrency &&
+					navigator.hardwareConcurrency < 4) || // Few CPU cores
+				(!("ontouchstart" in window) &&
+					!navigator.userAgent.includes("Chrome")); // Non-touch non-Chrome
+			setIsLowEndDevice(isLowEnd);
+		};
+
+		checkDevice();
+		window.addEventListener("resize", checkDevice);
+		return () => window.removeEventListener("resize", checkDevice);
+	}, []);
+
+	// Return simplified background for mobile/low-end devices
+	if (isMobile || isLowEndDevice) {
+		return (
+			<div className="fixed top-0 left-0 z-0 w-screen h-screen m-0 p-0">
+				<div className="w-full h-full bg-gradient-to-br from-[#111111] via-[#1a1a1a] to-[#0a0a0a]" />
+				<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(145,234,255,0.1)_0%,transparent_90%)]" />
+			</div>
+		);
+	}
+
 	return (
 		<div className="fixed top-0 left-0 z-0 w-screen h-screen m-0 p-0">
 			<Canvas
-				dpr={[1, 1.5]}
+				dpr={
+					typeof window !== "undefined"
+						? Math.min(window.devicePixelRatio, 1.5)
+						: [1, 1.5]
+				}
 				camera={{ position: [-0.7, 0, 1], far: 1000 }}
 				gl={{
 					antialias: true,
 					alpha: true,
-					powerPreference: "default",
+					powerPreference: "high-performance",
 				}}
 				className="relative w-full h-full"
+				performance={{ min: 0.5, max: 1 }}
 			>
 				<color attach="background" args={["rgb(11, 11, 11)"]} />
 				<ambientLight intensity={0.8} />

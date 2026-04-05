@@ -70,6 +70,18 @@ export default function Menu() {
 				<Link href="/" className="mb-10 hover:scale-120">
 					<Typography variant="subtitle">inicio</Typography>
 				</Link>
+				<Link href="/#about" className="mb-10 hover:scale-120">
+					<Typography variant="subtitle">sobre</Typography>
+				</Link>
+				<Link href="/#projects" className="mb-10 hover:scale-120">
+					<Typography variant="subtitle">projetos</Typography>
+				</Link>
+				<Link href="/#packages" className="mb-10 hover:scale-120">
+					<Typography variant="subtitle">pacotes</Typography>
+				</Link>
+				<Link href="/#testimonials" className="mb-10 hover:scale-120">
+					<Typography variant="subtitle">depoimentos</Typography>
+				</Link>
 				<Link href="/form" className="mb-10 hover:scale-120">
 					<Typography variant="subtitle">contato</Typography>
 				</Link>
