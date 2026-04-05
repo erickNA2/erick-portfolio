@@ -1,5 +1,4 @@
 import React from "react";
-import Typography from "@/components/ui/Typography";
 
 export interface CardProps {
 	children: React.ReactNode;
